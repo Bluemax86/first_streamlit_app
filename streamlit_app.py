@@ -24,7 +24,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 # Create a repeatable code block, normally called a function
-def get_fruityvice_data(this_fruit_choice)
+def get_fruityvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
   # Normalize the json data into a flat table format 
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
